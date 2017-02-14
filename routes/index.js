@@ -20,7 +20,7 @@ aws.config.update({
 var s3 = new aws.S3();
 
 var fileName = Date.now().toString();
-console.log(fileName);
+//console.log(fileName);
 var upload = multer({
     storage: multerS3({
         s3: s3,
@@ -28,8 +28,8 @@ var upload = multer({
         key: function (req, file, cb) {
           var fileName = file.originalname
             var ext = fileName.slice(fileName.lastIndexOf('.'))
-            console.log(file);
-            console.log(ext);
+          //  console.log(file);
+            //console.log(ext);
             cb(null, Date.now().toString()+ext); //use Date.now() for unique file keys
         }
     })
@@ -42,7 +42,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', upload.single('fileShared'),function(req, res, next){
 
-  console.log(req.file);
+  //console.log(req.file);
 
 
    var file = new filesShared({
