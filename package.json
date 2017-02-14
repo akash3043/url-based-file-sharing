@@ -1,6 +1,8 @@
 {
   "name": "filesharing",
   "version": "0.0.0",
+  "description":"this app is made for making file sharing easy and fast",
+  "main": "app.js",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -22,5 +24,8 @@
   "devDependencies": {},
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "engines" : {
+      "node": "6.9.4"
+    }
 }
